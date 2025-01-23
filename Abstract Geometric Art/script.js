@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     // SVG content for the first SVG
     const svgContent1 = `
-        <circle cx="400" cy="300" r="100" fill="url(#grad1)" />
+        <circle cx="400" cy="1000" r="100" fill="url(#grad1)" />
         <defs>
             <linearGradient id="grad1" x1="0%" x2="0%" y1="100%" y2="100%">
                 <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listener for keydown to navigate the SVGs
     window.addEventListener("keydown", (event)=>{
-        const step = 50; // Set size for navigation
+        const step = 5; // Set size for navigation
         switch(event.key){
             case "ArrowUp":
                 viewBoxY -= step;
