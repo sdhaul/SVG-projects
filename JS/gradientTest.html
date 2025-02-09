@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Intro</title>
+</head>
+<body>
+    <svg width="1000" height="1000">
+        <defs>
+            <linearGradient id="myGradient" gradientTransform="rotate(90)">
+                <stop offset="5%" stop-color="gold"></stop>
+                <stop offset="95%" stop-color="red"></stop>
+            </linearGradient>
+            <linearGradient id="myGradient1" gradientTransform="rotate(45)">
+                <stop offset="5%" stop-color="gold"></stop>
+                <stop offset="95%" stop-color="red"></stop>
+            </linearGradient>
+        </defs>
+        <!-- Circle -->
+         <circle
+            cx="100"
+            cy="100"
+            r="50"
+            fill="url(#myGradient)">
+            <animate attributeName="cx" from="100" to="200" dur="8s" repeatCount="indefinite"></animate>
+        </circle>
+        <!-- Rectangle -->
+        <rect
+            x="200"
+            y="200"
+            width="300"
+            height="100"
+            fill="url(#myGradient1)">
+        </rect>
+        <!-- Ellipse -->
+        <ellipse
+            cx="500"
+            cy="90"
+            rx="100"
+            ry="50"
+            fill="transparent"
+            stroke="url(#myGradient)"
+            stroke-width="15">
+        </ellipse>
+    </svg>
+</body>
+</html>
